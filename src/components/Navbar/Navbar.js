@@ -11,7 +11,7 @@ const NavigationBar = () => {
         <LinkContainer to="/">
           <Navbar.Brand>
             <span>
-              <img src={logo} className="logo" />
+              <img src={logo} alt="kudoboard logo" className="logo" />
             </span>
           </Navbar.Brand>
         </LinkContainer>
