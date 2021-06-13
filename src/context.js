@@ -9,6 +9,7 @@ const initialState = {
       id: 0,
       for: "Victor Borges",
       title: "Happy Birthday, Victor!",
+      theme: "Birthday",
       thumb:
         "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       kudos: [
@@ -23,7 +24,7 @@ const initialState = {
           from: "Alex",
           msg: "You're so old!",
           thumb:
-            "https://images.unsplash.com/photo-1533294160622-d5fece3e080d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
+            "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1131&q=80",
         },
         {
           id: 2,
@@ -37,6 +38,7 @@ const initialState = {
       id: 1,
       for: "Konnor Kane",
       title: "Congrats on the Promotion!",
+      theme: "Congratulations",
       thumb:
         "https://images.unsplash.com/photo-1594066521341-330a79387ec3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80",
       kudos: [
