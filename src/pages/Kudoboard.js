@@ -7,9 +7,12 @@ import "./style.css";
 
 const Kudoboard = () => {
   const { id } = useParams();
-  const { boards, newKudo } = useGlobalContext();
+  const { boards, kudos, newKudo } = useGlobalContext();
   const [kudoModal, setKudoModal] = useState(false);
-  const board = boards[id];
+  const board = boards.filter(
+    (singleBoard) => singleBoard.id.toString() === id
+  )[0];
+  const kudoArray = kudos[id];
 
   return (
     <main className={`Kudoboard-${board.theme}`}>
@@ -19,7 +22,7 @@ const Kudoboard = () => {
       </div>
       <Container>
         <CardColumns>
-          {board.kudos.map((kudo) => {
+          {kudoArray.map((kudo) => {
             return (
               <Card key={kudo.id} className="Kudo">
                 <Card.Img src={kudo.thumb} alt="kudo image" variant="top" />

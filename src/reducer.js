@@ -2,19 +2,19 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "NEW_KUDO":
       return {
-        boards: [
-          ...state.boards,
-          {
-            ...state,
-            id: action.payload.boardId,
-            kudos: {
+        ...state,
+        kudos: {
+          ...state.kudos,
+          [action.payload.boardId]: [
+            ...state.kudos[action.payload.boardId],
+            {
               id: action.payload.kudoId,
               from: action.payload.from,
               msg: action.payload.msg,
               thumb: action.payload.thumb,
             },
-          },
-        ],
+          ],
+        },
       };
     default:
       return state;
