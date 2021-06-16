@@ -15,7 +15,6 @@ import "./style.css";
 
 const Dashboard = () => {
   const { boards } = useGlobalContext();
-  console.log(boards);
 
   return (
     <main className="Dashboard">
