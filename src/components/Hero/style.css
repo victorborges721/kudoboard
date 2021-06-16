@@ -1,0 +1,26 @@
+.Jumbotron {
+  background-color: #ffecdc;
+}
+
+.Jumbotron-img {
+  width: 100%;
+}
+
+.Jumbotron-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Jumbotron-title,
+.Jumbotron-text {
+  color: #3a4651;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.Jumbotron-btn {
+  width: 13rem;
+  height: 3rem;
+  font-size: 1.1rem;
+}
