@@ -1,4 +1,9 @@
-button {
+.btn {
   background-color: #43a6e7 !important;
   border-color: #43a6e7 !important;
+}
+
+.red-btn {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
 }

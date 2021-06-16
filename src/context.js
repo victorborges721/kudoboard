@@ -77,8 +77,17 @@ const AppProvider = ({ children }) => {
   //     localStorage.setItem("state", JSON.stringify(state));
   //   }, [state]);
 
+  const newKudo = (boardId, kudoId, from, msg, thumb) => {
+    dispatch({
+      type: "NEW_KUDO",
+      payload: { boardId, kudoId, from, msg, thumb },
+    });
+  };
+
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, newKudo }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 
