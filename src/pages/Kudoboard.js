@@ -24,7 +24,7 @@ const Kudoboard = () => {
       <Container>
         <CardColumns>
           {kudoArray.map((kudo) => {
-            return <KudoCard key={kudo.id} kudo={kudo} />;
+            return <KudoCard key={kudo.id} kudo={kudo} board={board} />;
           })}
         </CardColumns>
       </Container>

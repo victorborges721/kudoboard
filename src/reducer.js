@@ -16,6 +16,16 @@ const reducer = (state, action) => {
           ],
         },
       };
+    case "DELETE_KUDO":
+      return {
+        ...state,
+        kudos: {
+          ...state.kudos,
+          [action.payload.boardId]: state.kudos[action.payload.boardId].filter(
+            (kudo) => kudo.id !== action.payload.kudoId
+          ),
+        },
+      };
     default:
       return state;
   }

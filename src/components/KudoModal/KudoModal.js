@@ -29,7 +29,11 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
               type="text"
               placeholder="Alex"
               onChange={(e) => setInputFrom(e.target.value)}
+              required
             />
+            <Form.Text className="text-muted">
+              Enter your name or 'Anonymous' if you want to keep this a secret.
+            </Form.Text>
           </Form.Group>
           <Form.Group>
             <Form.Label>Message:</Form.Label>
@@ -37,6 +41,7 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
               type="text"
               placeholder="Congratulations!"
               onChange={(e) => setInputMsg(e.target.value)}
+              required
             />
           </Form.Group>
           <Form.Group>
@@ -47,14 +52,15 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
               onChange={(e) => setInputUrl(e.target.value)}
             />
             <Form.Text className="text-muted">
-              Add a link to a <a href="https://giphy.com/">GIF</a> or photo to
-              make your Kudo pop!
+              Add a link to a <a href="https://giphy.com/">GIF</a> or{" "}
+              <a href="https://unsplash.com/">photo</a> to make your Kudo pop!
             </Form.Text>
           </Form.Group>
         </Form>
       </Modal.Body>
       <Modal.Footer>
         <Button
+          type="submit"
           onClick={() => {
             newKudo(board.id, uuidv4(), inputFrom, inputMsg, inputUrl);
             setShowKudoModal(false);

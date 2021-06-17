@@ -86,8 +86,12 @@ const AppProvider = ({ children }) => {
     });
   };
 
+  const deleteKudo = (boardId, kudoId) => {
+    dispatch({ type: "DELETE_KUDO", payload: { boardId, kudoId } });
+  };
+
   return (
-    <AppContext.Provider value={{ ...state, newKudo }}>
+    <AppContext.Provider value={{ ...state, newKudo, deleteKudo }}>
       {children}
     </AppContext.Provider>
   );
