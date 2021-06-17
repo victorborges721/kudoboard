@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Alert, Button, Form, Modal } from "react-bootstrap";
 import { useGlobalContext } from "../../context";
-import { v4 as uuidv4 } from "uuid";
 import "./style.css";
 
 const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
@@ -9,6 +8,17 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
   const [inputFrom, setInputFrom] = useState("");
   const [inputMsg, setInputMsg] = useState("");
   const [inputUrl, setInputUrl] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const boardId = board.id;
+
+  const handleNewKudo = (boardId, inputFrom, inputMsg, inputUrl) => {
+    if (inputFrom && inputMsg) {
+      newKudo(boardId, inputFrom, inputMsg, inputUrl);
+      setShowKudoModal(false);
+    } else {
+      setShowAlert(true);
+    }
+  };
 
   return (
     <Modal
@@ -23,6 +33,16 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
       </Modal.Header>
       <Modal.Body>
         <Form>
+          {showAlert && (
+            <Alert
+              variant="danger"
+              onClose={() => setShowAlert(false)}
+              dismissible
+            >
+              Please enter valid inputs for 'From' and 'Message'. A URL is
+              optional.
+            </Alert>
+          )}
           <Form.Group>
             <Form.Label>From:</Form.Label>
             <Form.Control
@@ -45,7 +65,9 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>From:</Form.Label>
+            <Form.Label>
+              GIF or Photo Link: <span className="text-muted">(Optional)</span>
+            </Form.Label>
             <Form.Control
               type="url"
               placeholder="https://media.giphy.com/media/bq1PRO9CLPHmURBvv2/giphy.gif"
@@ -61,10 +83,7 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
       <Modal.Footer>
         <Button
           type="submit"
-          onClick={() => {
-            newKudo(board.id, uuidv4(), inputFrom, inputMsg, inputUrl);
-            setShowKudoModal(false);
-          }}
+          onClick={() => handleNewKudo(boardId, inputFrom, inputMsg, inputUrl)}
         >
           Post
         </Button>

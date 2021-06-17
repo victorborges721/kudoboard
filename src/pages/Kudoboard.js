@@ -19,15 +19,24 @@ const Kudoboard = () => {
     <main className={`Kudoboard-${board.theme}`}>
       <div className={`Kudoboard-header Kudoboard-header-${board.theme}`}>
         <h1>{board.title}</h1>
-        <Button onClick={() => setShowKudoModal(true)}>+ Add to board</Button>
+        {kudoArray.length > 0 && (
+          <Button onClick={() => setShowKudoModal(true)}>+ Add to board</Button>
+        )}
       </div>
-      <Container>
-        <CardColumns>
-          {kudoArray.map((kudo) => {
-            return <KudoCard key={kudo.id} kudo={kudo} board={board} />;
-          })}
-        </CardColumns>
-      </Container>
+      {kudoArray.length > 0 ? (
+        <Container>
+          <CardColumns>
+            {kudoArray.map((kudo) => {
+              return <KudoCard key={kudo.id} kudo={kudo} board={board} />;
+            })}
+          </CardColumns>
+        </Container>
+      ) : (
+        <Container className="noKudos">
+          <h1>Get the party started by writing the first Kudo!</h1>
+          <Button onClick={() => setShowKudoModal(true)}>+ Add to board</Button>
+        </Container>
+      )}
       {showKudoModal && (
         <KudoModal
           board={board}

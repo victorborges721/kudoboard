@@ -7,7 +7,9 @@ const KudoCard = ({ kudo, board }) => {
   const { deleteKudo } = useGlobalContext();
   return (
     <Card className="Kudo">
-      <Card.Img src={kudo.thumb} alt="kudo image" variant="top" />
+      {kudo.thumb && (
+        <Card.Img src={kudo.thumb} alt="kudo image" variant="top" />
+      )}
       <Card.Body>
         <Card.Text>{kudo.msg}</Card.Text>
         <Card.Text className="Kudo-from">From: {kudo.from}</Card.Text>

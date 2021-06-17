@@ -79,10 +79,10 @@ const AppProvider = ({ children }) => {
   //     localStorage.setItem("state", JSON.stringify(state));
   //   }, [state]);
 
-  const newKudo = (boardId, kudoId, from, msg, thumb) => {
+  const newKudo = (boardId, from, msg, thumb) => {
     dispatch({
       type: "NEW_KUDO",
-      payload: { boardId, kudoId, from, msg, thumb },
+      payload: { boardId, from, msg, thumb },
     });
   };
 

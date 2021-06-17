@@ -42,3 +42,14 @@
 .Kudo-btn {
   margin-left: 0.5rem;
 }
+
+.noKudos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: lightgray;
+  height: 20vh;
+  border-radius: 10px;
+}
