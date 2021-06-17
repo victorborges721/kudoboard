@@ -67,11 +67,19 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
           <Form.Group>
             <Form.Label>Theme:</Form.Label>
             <Form.Control
-              type="text"
-              placeholder="Congrats on Graduating!"
               onChange={(e) => setInputTheme(e.target.value)}
               required
-            />
+              as="select"
+            >
+              <option selected="selected" disabled>
+                Select...
+              </option>
+              <option>Birthday</option>
+              <option>Congratulations</option>
+              <option>Retirement</option>
+              <option>Wedding</option>
+            </Form.Control>
+            <Form.Text className="text-muted">What's the occasion?</Form.Text>
           </Form.Group>
           <Form.Group>
             <Form.Label>Image:</Form.Label>
