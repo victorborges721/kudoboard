@@ -41,6 +41,48 @@ const kudos = {
       thumb: "https://media.giphy.com/media/G96zgIcQn1L2xpmdxi/giphy.gif",
     },
   ],
+  2: [
+    {
+      id: 0,
+      from: "Erin",
+      msg: "Huge congrats! So glad we get to celebrate with you.",
+      thumb: "https://media.giphy.com/media/jni1jkbS97ooWR1CmE/giphy.gif",
+    },
+    {
+      id: 1,
+      from: "Monique",
+      msg: "I can't believe it! WOOOO!",
+      thumb:
+        "https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80",
+    },
+    {
+      id: 2,
+      from: "Summer",
+      msg: "I hope your wedding is exactly like this.",
+      thumb: "https://media.giphy.com/media/5vef4sn8zhnlC/giphy.gif",
+    },
+  ],
+  3: [
+    {
+      id: 0,
+      from: "Michael",
+      msg: "Enjoy your unlimited vacation time!",
+      thumb: "https://media.giphy.com/media/RNbJ8ABs62p1HQ7Xrl/giphy.gif",
+    },
+    {
+      id: 1,
+      from: "Ben",
+      msg: "Take lots of pictures when you get to Hawaii!!!!",
+      thumb:
+        "https://images.unsplash.com/photo-1570900808791-d530855f79e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1084&q=80",
+    },
+    {
+      id: 2,
+      from: "Natalie",
+      msg: "Now you can say this when someone asks you to do something!",
+      thumb: "https://media.giphy.com/media/LOiE0ZEA9puqZVOR6U/giphy.gif",
+    },
+  ],
 };
 
 export default kudos;
