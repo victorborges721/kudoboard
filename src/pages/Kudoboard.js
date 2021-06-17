@@ -18,9 +18,14 @@ const Kudoboard = () => {
   return (
     <main className={`Kudoboard-${board.theme}`}>
       <div className={`Kudoboard-header Kudoboard-header-${board.theme}`}>
-        <h1>{board.title}</h1>
+        <h1 className="Kudoboard-header-title">{board.title}</h1>
         {kudoArray.length > 0 && (
-          <Button onClick={() => setShowKudoModal(true)}>+ Add to board</Button>
+          <Button
+            onClick={() => setShowKudoModal(true)}
+            className={`btn-${board.theme}`}
+          >
+            + Add to board
+          </Button>
         )}
       </div>
       {kudoArray.length > 0 ? (
@@ -33,7 +38,7 @@ const Kudoboard = () => {
         </Container>
       ) : (
         <Container className="noKudos">
-          <h1>Get the party started by writing the first Kudo!</h1>
+          <h1>Get this party started by writing the first Kudo!</h1>
           <Button onClick={() => setShowKudoModal(true)}>+ Add to board</Button>
         </Container>
       )}

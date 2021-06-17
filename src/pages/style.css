@@ -16,6 +16,8 @@
 .Kudoboard-header-Birthday {
   background-color: #f15bb5;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .Kudoboard-Congratulations {
@@ -28,6 +30,8 @@
 .Kudoboard-header-Congratulations {
   background-color: #8338ec;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .Kudo-from {
@@ -52,4 +56,25 @@
   background-color: lightgray;
   height: 20vh;
   border-radius: 10px;
+}
+
+/* .Kudoboard-header-title {
+  position: relative;
+}
+
+.addToBoard {
+  position: absolute;
+  top: 12.25rem;
+  left: 32.5rem;
+} */
+
+.btn-Birthday {
+  background-color: white !important;
+  border-color: white !important;
+  color: #f15bb5;
+}
+.btn-Congratulations {
+  background-color: white !important;
+  border-color: white !important;
+  color: #8338ec;
 }

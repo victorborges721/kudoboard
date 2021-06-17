@@ -2,6 +2,24 @@ import { v4 as uuidv4 } from "uuid";
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "NEW_KUDOBOARD":
+      let boardId = uuidv4();
+      return {
+        boards: [
+          ...state.boards,
+          {
+            id: boardId,
+            person: action.payload.person,
+            title: action.payload.title,
+            theme: action.payload.theme,
+            thumb: action.payload.thumb,
+          },
+        ],
+        kudos: {
+          ...state.kudos,
+          [boardId]: [],
+        },
+      };
     case "NEW_KUDO":
       let kudoId = uuidv4();
       return {

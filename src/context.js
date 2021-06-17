@@ -7,7 +7,7 @@ const initialState = {
   boards: [
     {
       id: 0,
-      for: "Victor Borges",
+      person: "Victor Borges",
       title: "Happy Birthday, Victor!",
       theme: "Birthday",
       thumb:
@@ -15,7 +15,7 @@ const initialState = {
     },
     {
       id: 1,
-      for: "Maria Smith",
+      person: "Maria Smith",
       title: "Congrats on the Promotion!",
       theme: "Congratulations",
       thumb:
@@ -79,6 +79,13 @@ const AppProvider = ({ children }) => {
   //     localStorage.setItem("state", JSON.stringify(state));
   //   }, [state]);
 
+  const newKudoboard = (person, title, theme, thumb) => {
+    dispatch({
+      type: "NEW_KUDOBOARD",
+      payload: { person, title, theme, thumb },
+    });
+  };
+
   const newKudo = (boardId, from, msg, thumb) => {
     dispatch({
       type: "NEW_KUDO",
@@ -91,7 +98,14 @@ const AppProvider = ({ children }) => {
   };
 
   return (
-    <AppContext.Provider value={{ ...state, newKudo, deleteKudo }}>
+    <AppContext.Provider
+      value={{
+        ...state,
+        newKudoboard,
+        newKudo,
+        deleteKudo,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

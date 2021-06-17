@@ -4,7 +4,7 @@ import jumbotron_img from "../../images/jumbotron_img.jpg";
 
 import "./style.css";
 
-const Hero = () => {
+const Hero = ({ setShowKudoboardModal }) => {
   return (
     <Jumbotron className="Jumbotron">
       <Container>
@@ -17,7 +17,12 @@ const Hero = () => {
               Celebrate someone with an online group card filled with messages,
               GIFs, photos, and more!
             </p>
-            <Button className="Jumbotron-btn">Create Kudoboard</Button>
+            <Button
+              onClick={() => setShowKudoboardModal(true)}
+              className="Jumbotron-btn"
+            >
+              Create Kudoboard
+            </Button>
           </Col>
           <Col xs={12} md={7} className="Jumbotron-col">
             <img

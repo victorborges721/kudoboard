@@ -21,12 +21,9 @@ const NavigationBar = () => {
             <LinkContainer exact to="/">
               <Nav.Link eventKey="link-1">Dashboard</Nav.Link>
             </LinkContainer>
-            <Nav.Link
-              eventKey="link-2"
-              // onSelect={}
-            >
-              New Board
-            </Nav.Link>
+            <LinkContainer to="/howitworks">
+              <Nav.Link eventKey="link-2">How It Works</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>
