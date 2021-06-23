@@ -37,6 +37,20 @@ const reducer = (state, action) => {
           ],
         },
       };
+    case 'EDIT_KUDO':
+      return {...state,
+        kudos: {
+          ...state.kudos,
+          [action.payload.boardId] : state.kudos[action.payload.boardId].filter(
+            (kudo) => kudo.id !== action.payload.kudoId
+          ).push({
+            id: action.payload.kudoId, 
+            from: action.payload.newFrom,
+            msg: action.payload.newMsg,
+            thumb: action.payload.newThumb,
+          })
+        }
+      }
     case "DELETE_KUDO":
       return {
         ...state,

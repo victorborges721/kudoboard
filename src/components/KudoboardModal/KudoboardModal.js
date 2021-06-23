@@ -71,7 +71,7 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
               required
               as="select"
             >
-              <option selected="selected" disabled>
+              <option defaultValue disabled>
                 Select...
               </option>
               <option>Birthday</option>
@@ -89,8 +89,8 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
               onChange={(e) => setInputThumb(e.target.value)}
             />
             <Form.Text className="text-muted">
-              Select a <a href="https://giphy.com/">GIF</a> or{" "}
-              <a href="https://unsplash.com/">photo</a> as a preview to your
+              Select a <a href="https://giphy.com/" target="_blank" rel='noreferrer'>GIF</a> or{" "}
+              <a href="https://unsplash.com/" target="_blank" rel='noreferrer'>photo</a> as a preview to your
               Kudoboard!
             </Form.Text>
           </Form.Group>

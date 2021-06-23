@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useEffect } from "react";
+import React, { useContext, useReducer } from "react";
 import reducer from "./reducer";
 import boards from "./data/boards";
 import kudos from "./data/kudos";
@@ -14,18 +14,7 @@ const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(
     reducer,
     initialState
-    // (initialState) => JSON.parse(localStorage.getItem("state")) || initialState
   );
-
-  // useEffect(() => {
-  //   if(localStorage.getItem('state')) {
-
-  //   }
-  // })
-
-  // useEffect(() => {
-  //   localStorage.setItem("state", JSON.stringify(state));
-  // }, [state]);
 
   const newKudoboard = (person, title, theme, thumb) => {
     dispatch({
@@ -41,6 +30,10 @@ const AppProvider = ({ children }) => {
     });
   };
 
+  const editKudo = (boardId, kudoId, newFrom, newMsg, newThumb) => {
+    dispatch({type: 'EDIT_KUDO', payload: { boardId, kudoId, newFrom, newMsg, newThumb}})
+  }
+
   const deleteKudo = (boardId, kudoId) => {
     dispatch({ type: "DELETE_KUDO", payload: { boardId, kudoId } });
   };
@@ -51,6 +44,7 @@ const AppProvider = ({ children }) => {
         ...state,
         newKudoboard,
         newKudo,
+        editKudo,
         deleteKudo,
       }}
     >

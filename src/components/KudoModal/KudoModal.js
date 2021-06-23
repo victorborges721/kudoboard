@@ -74,8 +74,8 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
               onChange={(e) => setInputUrl(e.target.value)}
             />
             <Form.Text className="text-muted">
-              Add a link to a <a href="https://giphy.com/">GIF</a> or{" "}
-              <a href="https://unsplash.com/">photo</a> to make your Kudo pop!
+              Add a link to a <a href="https://giphy.com/" target="_blank" rel='noreferrer'>GIF</a> or{" "}
+              <a href="https://unsplash.com/" target="_blank" rel='noreferrer'>photo</a> to make your Kudo pop!
             </Form.Text>
           </Form.Group>
         </Form>
