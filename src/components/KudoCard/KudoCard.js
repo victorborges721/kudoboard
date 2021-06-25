@@ -1,29 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { useGlobalContext } from "../../context";
+import EditKudoModal from "../EditKudoModal";
 import "./style.css";
 
 const KudoCard = ({ kudo, board }) => {
   const { deleteKudo } = useGlobalContext();
+  const [showEditKudoModal, setShowEditKudoModal] = useState(false);
   return (
-    <Card className="Kudo">
-      {kudo.thumb && (
-        <Card.Img src={kudo.thumb} alt="kudo image" variant="top" />
+    <React.Fragment>
+      <Card className="Kudo">
+        {kudo.thumb && (
+          <Card.Img src={kudo.thumb} alt="kudo image" variant="top" />
+        )}
+        <Card.Body>
+          <Card.Text>{kudo.msg}</Card.Text>
+          <Card.Text className="Kudo-from">From: {kudo.from}</Card.Text>
+          <div className="Kudo-btns">
+            <Button
+              className="Kudo-btn"
+              onClick={() => setShowEditKudoModal(true)}
+            >
+              Edit
+            </Button>
+            <Button
+              className="Kudo-btn red-btn"
+              onClick={() => deleteKudo(board.id, kudo.id)}
+            >
+              Delete
+            </Button>
+          </div>
+        </Card.Body>
+      </Card>
+      {showEditKudoModal && (
+        <EditKudoModal
+          showEditKudoModal={showEditKudoModal}
+          setShowEditKudoModal={setShowEditKudoModal}
+          kudo={kudo}
+          board={board}
+        />
       )}
-      <Card.Body>
-        <Card.Text>{kudo.msg}</Card.Text>
-        <Card.Text className="Kudo-from">From: {kudo.from}</Card.Text>
-        <div className="Kudo-btns">
-          <Button className="Kudo-btn">Edit</Button>
-          <Button
-            className="Kudo-btn red-btn"
-            onClick={() => deleteKudo(board.id, kudo.id)}
-          >
-            Delete
-          </Button>
-        </div>
-      </Card.Body>
-    </Card>
+    </React.Fragment>
   );
 };
 

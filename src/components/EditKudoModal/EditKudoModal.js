@@ -3,33 +3,40 @@ import { Alert, Button, Form, Modal } from "react-bootstrap";
 import { useGlobalContext } from "../../context";
 import "./style.css";
 
-const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
-  const { newKudo } = useGlobalContext();
-  const [inputFrom, setInputFrom] = useState("");
-  const [inputMsg, setInputMsg] = useState("");
-  const [inputUrl, setInputUrl] = useState("");
+const EditKudoModal = ({
+  showEditKudoModal,
+  setShowEditKudoModal,
+  kudo,
+  board,
+}) => {
+  const { editKudo, kudos } = useGlobalContext();
+  const [newInputFrom, setNewInputFrom] = useState(kudo.from);
+  const [newInputMsg, setNewInputMsg] = useState(kudo.msg);
+  const [newInputUrl, setNewInputUrl] = useState(kudo.thumb);
   const [showAlert, setShowAlert] = useState(false);
   const boardId = board.id;
+  const kudoId = kudo.id;
 
-  const handleNewKudo = (boardId, inputFrom, inputMsg, inputUrl) => {
-    if (inputFrom && inputMsg) {
-      newKudo(boardId, inputFrom, inputMsg, inputUrl);
-      setShowKudoModal(false);
+  const handleEditKudo = (newInputFrom, newInputMsg, newInputUrl) => {
+    if (newInputFrom && newInputMsg) {
+      editKudo(boardId, kudoId, newInputFrom, newInputMsg, newInputUrl);
+      setShowEditKudoModal(false);
     } else {
       setShowAlert(true);
     }
   };
-
   return (
     <Modal
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      show={showKudoModal}
-      onHide={() => setShowKudoModal(false)}
+      show={showEditKudoModal}
+      onHide={() => setShowEditKudoModal(false)}
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Add a Post</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Edit This Post
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
@@ -47,8 +54,8 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
             <Form.Label>From:</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Alex"
-              onChange={(e) => setInputFrom(e.target.value)}
+              value={newInputFrom}
+              onChange={(e) => setNewInputFrom(e.target.value)}
               required
             />
             <Form.Text className="text-muted">
@@ -59,8 +66,8 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
             <Form.Label>Message:</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Congratulations!"
-              onChange={(e) => setInputMsg(e.target.value)}
+              value={newInputMsg}
+              onChange={(e) => setNewInputMsg(e.target.value)}
               required
             />
           </Form.Group>
@@ -70,8 +77,8 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
             </Form.Label>
             <Form.Control
               type="url"
-              placeholder="https://media.giphy.com/media/bq1PRO9CLPHmURBvv2/giphy.gif"
-              onChange={(e) => setInputUrl(e.target.value)}
+              value={newInputUrl}
+              onChange={(e) => setNewInputUrl(e.target.value)}
             />
             <Form.Text className="text-muted">
               Add a link to a{" "}
@@ -90,11 +97,11 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
       <Modal.Footer>
         <Button
           type="submit"
-          onClick={() => handleNewKudo(boardId, inputFrom, inputMsg, inputUrl)}
+          onClick={() => handleEditKudo(newInputFrom, newInputMsg, newInputUrl)}
         >
-          Post
+          Save
         </Button>
-        <Button onClick={() => setShowKudoModal(false)} className="red-btn">
+        <Button onClick={() => setShowEditKudoModal(false)} className="red-btn">
           Close
         </Button>
       </Modal.Footer>
@@ -102,4 +109,4 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
   );
 };
 
-export default KudoModal;
+export default EditKudoModal;
