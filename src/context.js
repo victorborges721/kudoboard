@@ -11,10 +11,7 @@ const initialState = {
 };
 
 const AppProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const newKudoboard = (person, title, theme, thumb) => {
     dispatch({
@@ -31,8 +28,11 @@ const AppProvider = ({ children }) => {
   };
 
   const editKudo = (boardId, kudoId, newFrom, newMsg, newThumb) => {
-    dispatch({type: 'EDIT_KUDO', payload: { boardId, kudoId, newFrom, newMsg, newThumb}})
-  }
+    dispatch({
+      type: "EDIT_KUDO",
+      payload: { boardId, kudoId, newFrom, newMsg, newThumb },
+    });
+  };
 
   const deleteKudo = (boardId, kudoId) => {
     dispatch({ type: "DELETE_KUDO", payload: { boardId, kudoId } });

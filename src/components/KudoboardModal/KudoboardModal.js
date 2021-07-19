@@ -70,10 +70,9 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
               onChange={(e) => setInputTheme(e.target.value)}
               required
               as="select"
+              defaultValue="Select..."
             >
-              <option defaultValue disabled>
-                Select...
-              </option>
+              <option disabled>Select...</option>
               <option>Birthday</option>
               <option>Congratulations</option>
               <option>Retirement</option>
@@ -89,9 +88,15 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
               onChange={(e) => setInputThumb(e.target.value)}
             />
             <Form.Text className="text-muted">
-              Select a <a href="https://giphy.com/" target="_blank" rel='noreferrer'>GIF</a> or{" "}
-              <a href="https://unsplash.com/" target="_blank" rel='noreferrer'>photo</a> as a preview to your
-              Kudoboard!
+              Select a{" "}
+              <a href="https://giphy.com/" target="_blank" rel="noreferrer">
+                GIF
+              </a>{" "}
+              or{" "}
+              <a href="https://unsplash.com/" target="_blank" rel="noreferrer">
+                photo
+              </a>{" "}
+              as a preview to your Kudoboard!
             </Form.Text>
           </Form.Group>
         </Form>
