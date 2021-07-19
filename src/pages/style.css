@@ -86,19 +86,6 @@
   color: #ef476f;
 }
 
-.Kudo-from {
-  text-align: right;
-  color: gray;
-}
-
-.Kudo-btns {
-  text-align: right;
-}
-
-.Kudo-btn {
-  margin-left: 0.5rem;
-}
-
 .noKudos {
   display: flex;
   justify-content: center;
@@ -109,13 +96,3 @@
   height: 20vh;
   border-radius: 10px;
 }
-
-/* .Kudoboard-header-title {
-  position: relative;
-}
-
-.addToBoard {
-  position: absolute;
-  top: 12.25rem;
-  left: 32.5rem;
-} */

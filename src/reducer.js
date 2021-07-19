@@ -69,6 +69,14 @@ const reducer = (state, action) => {
           ),
         },
       };
+    case "DELETE_KUDOBOARD":
+      delete state.kudos[action.payload.boardId];
+      return {
+        ...state,
+        boards: state.boards.filter(
+          (board) => board.id !== action.payload.boardId
+        ),
+      };
     default:
       return state;
   }

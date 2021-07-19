@@ -38,6 +38,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "DELETE_KUDO", payload: { boardId, kudoId } });
   };
 
+  const deleteKudoboard = (boardId) => {
+    dispatch({ type: "DELETE_KUDOBOARD", payload: { boardId } });
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -46,6 +50,7 @@ const AppProvider = ({ children }) => {
         newKudo,
         editKudo,
         deleteKudo,
+        deleteKudoboard,
       }}
     >
       {children}
