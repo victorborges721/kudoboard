@@ -9,7 +9,7 @@ const EditKudoModal = ({
   kudo,
   board,
 }) => {
-  const { editKudo, kudos } = useGlobalContext();
+  const { editKudo } = useGlobalContext();
   const [newInputFrom, setNewInputFrom] = useState(kudo.from);
   const [newInputMsg, setNewInputMsg] = useState(kudo.msg);
   const [newInputUrl, setNewInputUrl] = useState(kudo.thumb);

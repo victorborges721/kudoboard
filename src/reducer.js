@@ -38,38 +38,25 @@ const reducer = (state, action) => {
         },
       };
     case "EDIT_KUDO":
-      let editedKudo = {
-        id: action.payload.kudoId,
-        from: action.payload.newFrom,
-        msg: action.payload.newMsg,
-        thumb: action.payload.newThumb,
-      };
-      console.log(editedKudo);
       let idx = state.kudos[action.payload.boardId].findIndex(
         (kudo) => kudo.id === action.payload.kudoId
       );
-      console.log(idx);
-      let finalArr = state.kudos[action.payload.boardId].splice(
-        idx,
-        1,
-        editedKudo
-      );
-      console.log(finalArr);
-      // let filteredArr = state.kudos[action.payload.boardId].filter(
-      //   (kudo) => kudo.id !== action.payload.kudoId
-      // );
-      // let finalArr = filteredArr.concat(editedKudo);
       return {
         ...state,
         kudos: {
           ...state.kudos,
-          [action.payload.boardId]: finalArr,
-          // state.kudos[action.payload.boardId]
-          // .find(
-          //   (kudo) => kudo.id === action.payload.kudoId
-          // ),
-          // .filter((kudo) => kudo.id !== action.payload.kudoId)
-          // .push(editedKudo),
+          [action.payload.boardId]: state.kudos[action.payload.boardId].map(
+            (kudo, i) =>
+              i === idx
+                ? {
+                    ...kudo,
+                    id: action.payload.kudoId,
+                    from: action.payload.newFrom,
+                    msg: action.payload.newMsg,
+                    thumb: action.payload.newThumb,
+                  }
+                : kudo
+          ),
         },
       };
     case "DELETE_KUDO":
