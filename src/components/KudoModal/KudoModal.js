@@ -82,7 +82,9 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
               <a href="https://unsplash.com/" target="_blank" rel="noreferrer">
                 photo
               </a>{" "}
-              to make your Kudo pop!
+              to make your Kudo pop! On GIPHY, click 'Copy Link' and paste it
+              here. On Unsplash, right-click an image, select 'Copy Image
+              Address', and paste it here.
             </Form.Text>
           </Form.Group>
         </Form>

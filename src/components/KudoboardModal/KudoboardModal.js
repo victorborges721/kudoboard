@@ -96,7 +96,9 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
               <a href="https://unsplash.com/" target="_blank" rel="noreferrer">
                 photo
               </a>{" "}
-              as a preview to your Kudoboard!
+              as a preview to your Kudoboard! On GIPHY, click 'Copy Link' and
+              paste it here. On Unsplash, right-click an image, select 'Copy
+              Image Address', and paste it here.
             </Form.Text>
           </Form.Group>
         </Form>
