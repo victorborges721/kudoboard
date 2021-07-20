@@ -16,7 +16,7 @@ const Kudoboard = () => {
   const kudoArray = kudos[id];
 
   return (
-    <main className={`Kudoboard-${board.theme}`}>
+    <main className={`Kudoboard Kudoboard-${board.theme}`}>
       <div className={`Kudoboard-header Kudoboard-header-${board.theme}`}>
         <h1 className="Kudoboard-header-title">{board.title}</h1>
         {kudoArray.length > 0 && (

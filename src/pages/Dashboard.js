@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, CardColumns } from "react-bootstrap";
+import { Button, Container, CardColumns } from "react-bootstrap";
 import Hero from "../components/Hero";
 import KudoboardCard from "../components/KudoboardCard";
 import KudoboardModal from "../components/KudoboardModal";
@@ -16,11 +16,20 @@ const Dashboard = () => {
       <div className="Dashboard-kudoboards">
         <Container>
           <h2>My Kudoboards</h2>
-          <CardColumns>
-            {boards.map((board) => {
-              return <KudoboardCard key={board.id} board={board} />;
-            })}
-          </CardColumns>
+          {boards.length > 0 ? (
+            <CardColumns>
+              {boards.map((board) => {
+                return <KudoboardCard key={board.id} board={board} />;
+              })}
+            </CardColumns>
+          ) : (
+            <Container className="noKudos">
+              <h1>Create your first Kudoboard today!</h1>
+              <Button onClick={() => setShowKudoboardModal(true)}>
+                Create a Board
+              </Button>
+            </Container>
+          )}
         </Container>
       </div>
       {showKudoboardModal && (
