@@ -24,7 +24,7 @@ const Dashboard = () => {
             </CardColumns>
           ) : (
             <Container className="noKudos">
-              <h1>Create your first Kudoboard today!</h1>
+              <h1>Celebrate someone with your first Kudoboard!</h1>
               <Button onClick={() => setShowKudoboardModal(true)}>
                 Create a Board
               </Button>
