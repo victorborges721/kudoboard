@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import pages
 import Dashboard from "./pages/Dashboard";
 import Kudoboard from "./pages/Kudoboard";
+import HowItWorks from "./pages/HowItWorks";
 import Error from "./pages/Error";
 // import components
 import NavigationBar from "./components/Navbar";
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/kudoboard/:id">
           <Kudoboard />
+        </Route>
+        <Route path="/howitworks">
+          <HowItWorks />
         </Route>
         <Route path="*">
           <Error />
