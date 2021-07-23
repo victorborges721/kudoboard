@@ -1,48 +1,84 @@
 import React from "react";
-import { Button, Container } from "react-bootstrap";
-import KudoboardModal from "../components/KudoboardModal";
-import { useGlobalContext } from "../context";
+import { Container, Row, Col } from "react-bootstrap";
 
 const HowItWorks = () => {
-  const { newKudoboard } = useGlobalContext();
-
   return (
     <main>
-      <Container>
-        <h1>How Our Group Cards Work</h1>
-        <p>
-          Start a digital group card for a colleague, friend, or family member.
-          Share the link with anyone, anywhere so they can post. Deliver when
-          you're ready!
-        </p>
-        <div className="Steps">
-          <div className="Step">
-            <h2>Create a Kudoboard</h2>
-            <p>Choose a recipient to celebrate with the group greeting card.</p>
-          </div>
-          <div className="Step">
-            <h2>Add Your Content</h2>
+      <div className="HowItWorks-Overview">
+        <Container>
+          <Row className="Header">
+            <h1 className="HowItWorks-Title">How Our Group Cards Work</h1>
             <p>
-              Get creative. Attach messages, photos, and GIFs to the recipient's
-              board.
+              Start a digital group card for a colleague, friend, or family
+              member. Share the link with anyone, anywhere so they can post.
+              Deliver when you're ready!
             </p>
-          </div>
-          <div className="Step">
-            <h2>Enlist Your Group</h2>
-            <p>
-              Invite others to add their contributions and watch the virtual
-              group card grow.
-            </p>
-          </div>
-          <div className="Step">
-            <h2>Deliver Appreciation</h2>
-            <p>
-              Deliver it online, print it out as a poster, or play it as a
-              slideshow!
-            </p>
-          </div>
-        </div>
-      </Container>
+          </Row>
+          <Row>
+            <Col>
+              <Row>
+                {" "}
+                <Col xs={2}>
+                  <h2 className="Step-Number">1</h2>
+                </Col>
+                <Col xs={10}>
+                  <h3 className="Step-Title">Create a Kudoboard</h3>
+                  <p>
+                    Choose a recipient to celebrate with the group greeting
+                    card.
+                  </p>
+                </Col>
+              </Row>
+            </Col>
+            <Col>
+              <Row>
+                {" "}
+                <Col xs={2}>
+                  <h2 className="Step-Number">2</h2>
+                </Col>
+                <Col xs={10}>
+                  <h3 className="Step-Title">Add Your Content</h3>
+                  <p>
+                    Get creative. Attach messages, photos, and GIFs to the
+                    recipient's board.
+                  </p>
+                </Col>
+              </Row>
+            </Col>
+            <Col>
+              <Row>
+                {" "}
+                <Col xs={2}>
+                  <h2 className="Step-Number">3</h2>
+                </Col>
+                <Col xs={10}>
+                  <h3 className="Step-Title">Enlist Your Group</h3>
+                  <p>
+                    Invite others to add their contributions and watch the
+                    virtual group card grow.
+                  </p>
+                </Col>
+              </Row>
+            </Col>
+            <Col>
+              <Row>
+                {" "}
+                <Col xs={2}>
+                  <h2 className="Step-Number">4</h2>
+                </Col>
+                <Col xs={10}>
+                  <h3 className="Step-Title">Deliver Appreciation</h3>
+                  <p>
+                    Deliver it online, print it out as a poster, or play it as a
+                    slideshow!
+                  </p>
+                </Col>
+              </Row>
+            </Col>
+            <div className="Steps"></div>
+          </Row>
+        </Container>
+      </div>
     </main>
   );
 };

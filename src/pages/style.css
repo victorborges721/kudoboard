@@ -100,3 +100,30 @@
   height: 20vh;
   border-radius: 10px;
 }
+
+.HowItWorks-Overview {
+  background-color: #f6fbfe;
+  padding: 5rem;
+}
+
+.HowItWorks-Title {
+  font-weight: 400;
+}
+
+.Step-Title {
+  font-weight: 400;
+}
+
+.Step-Number {
+  color: white;
+  border-radius: 50%;
+  background-color: #43a6e7;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  font-weight: 200;
+}
+
+.Header {
+  text-align: center;
+}

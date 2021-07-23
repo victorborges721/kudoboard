@@ -1,3 +1,8 @@
+body {
+  font-family: museo-sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #3a4651;
+}
+
 .btn {
   background-color: #43a6e7 !important;
   border-color: #43a6e7 !important;

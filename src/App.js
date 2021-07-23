@@ -5,12 +5,14 @@ import Dashboard from "./pages/Dashboard";
 import Kudoboard from "./pages/Kudoboard";
 import HowItWorks from "./pages/HowItWorks";
 import Error from "./pages/Error";
+import ScrollToTop from "./components/ScrollToTop";
 // import components
 import NavigationBar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <NavigationBar />
       <Switch>
         <Route exact path="/">
