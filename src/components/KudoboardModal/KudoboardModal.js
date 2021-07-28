@@ -50,7 +50,9 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
               onChange={(e) => setInputFor(e.target.value)}
               required
             />
-            <Form.Text className="text-muted">Who are we honoring?</Form.Text>
+            <Form.Text className="text-muted">
+              Who are we celebrating?
+            </Form.Text>
           </Form.Group>
           <Form.Group>
             <Form.Label>Title:</Form.Label>
@@ -71,6 +73,7 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
               required
               as="select"
               defaultValue="Select..."
+              aria-label="Select dropdown"
             >
               <option disabled>Select...</option>
               <option>Birthday</option>
@@ -89,11 +92,21 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
             />
             <Form.Text className="text-muted">
               Select a{" "}
-              <a href="https://giphy.com/" target="_blank" rel="noreferrer">
+              <a
+                href="https://giphy.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
                 GIF
               </a>{" "}
               or{" "}
-              <a href="https://unsplash.com/" target="_blank" rel="noreferrer">
+              <a
+                href="https://unsplash.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
                 photo
               </a>{" "}
               as a preview to your Kudoboard! On GIPHY, click 'Copy Link' and

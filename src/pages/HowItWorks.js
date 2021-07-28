@@ -32,6 +32,7 @@ const HowItWorks = () => {
                 <Image
                   src="https://www.kudoboard.com/consumer/images/process-icons/icon-1.png"
                   className="HowItWorks-Image"
+                  alt="Select a recipient"
                 />
               </Row>
             </Col>
@@ -52,6 +53,7 @@ const HowItWorks = () => {
                 <Image
                   src="https://www.kudoboard.com/consumer/images/process-icons/icon-2.png"
                   className="HowItWorks-Image"
+                  alt="Attach messages, photos, etc"
                 />
               </Row>
             </Col>
@@ -72,6 +74,7 @@ const HowItWorks = () => {
                 <Image
                   src="https://www.kudoboard.com/consumer/images/process-icons/icon-3.png"
                   className="HowItWorks-Image"
+                  alt="Invite others to add"
                 />
               </Row>
             </Col>
@@ -92,6 +95,7 @@ const HowItWorks = () => {
                 <Image
                   src="https://www.kudoboard.com/consumer/images/process-icons/icon-4.png"
                   className="HowItWorks-Image"
+                  alt="Send the Kudoboard to the recepient"
                 />
               </Row>
             </Col>

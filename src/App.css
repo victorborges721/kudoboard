@@ -4,11 +4,15 @@ body {
 }
 
 .btn {
-  background-color: #43a6e7 !important;
-  border-color: #43a6e7 !important;
+  background-color: #2471a3 !important;
+  border-color: #2471a3 !important;
 }
 
 .red-btn {
   background-color: #dc3545 !important;
   border-color: #dc3545 !important;
+}
+
+.link {
+  color: #2471a3;
 }

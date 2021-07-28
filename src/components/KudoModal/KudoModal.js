@@ -75,11 +75,21 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
             />
             <Form.Text className="text-muted">
               Add a link to a{" "}
-              <a href="https://giphy.com/" target="_blank" rel="noreferrer">
+              <a
+                href="https://giphy.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
                 GIF
               </a>{" "}
               or{" "}
-              <a href="https://unsplash.com/" target="_blank" rel="noreferrer">
+              <a
+                href="https://unsplash.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
                 photo
               </a>{" "}
               to make your Kudo pop! On GIPHY, click 'Copy Link' and paste it
