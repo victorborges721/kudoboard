@@ -23,3 +23,12 @@
   height: 3rem;
   font-size: 1.1rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .Jumbotron-img {
+    display: none;
+  }
+  .Jumbotron-title {
+    font-size: 1.5rem;
+  }
+}
