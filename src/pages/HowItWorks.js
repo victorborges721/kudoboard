@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 
 const HowItWorks = () => {
   return (
@@ -8,17 +8,16 @@ const HowItWorks = () => {
         <Container>
           <Row className="Header">
             <h1 className="HowItWorks-Title">How Our Group Cards Work</h1>
-            <p>
+            <p className="HowItWorks-Subtitle">
               Start a digital group card for a colleague, friend, or family
               member. Share the link with anyone, anywhere so they can post.
               Deliver when you're ready!
             </p>
           </Row>
           <Row>
-            <Col>
+            <Col xs={12} md={6} lg={3} className="Step">
               <Row>
-                {" "}
-                <Col xs={2}>
+                <Col xs={2} className="test">
                   <h2 className="Step-Number">1</h2>
                 </Col>
                 <Col xs={10}>
@@ -29,10 +28,15 @@ const HowItWorks = () => {
                   </p>
                 </Col>
               </Row>
-            </Col>
-            <Col>
               <Row>
-                {" "}
+                <Image
+                  src="https://www.kudoboard.com/consumer/images/process-icons/icon-1.png"
+                  className="HowItWorks-Image"
+                />
+              </Row>
+            </Col>
+            <Col xs={12} md={6} lg={3} className="Step">
+              <Row>
                 <Col xs={2}>
                   <h2 className="Step-Number">2</h2>
                 </Col>
@@ -44,10 +48,15 @@ const HowItWorks = () => {
                   </p>
                 </Col>
               </Row>
-            </Col>
-            <Col>
               <Row>
-                {" "}
+                <Image
+                  src="https://www.kudoboard.com/consumer/images/process-icons/icon-2.png"
+                  className="HowItWorks-Image"
+                />
+              </Row>
+            </Col>
+            <Col xs={12} md={6} lg={3} className="Step">
+              <Row>
                 <Col xs={2}>
                   <h2 className="Step-Number">3</h2>
                 </Col>
@@ -59,10 +68,15 @@ const HowItWorks = () => {
                   </p>
                 </Col>
               </Row>
-            </Col>
-            <Col>
               <Row>
-                {" "}
+                <Image
+                  src="https://www.kudoboard.com/consumer/images/process-icons/icon-3.png"
+                  className="HowItWorks-Image"
+                />
+              </Row>
+            </Col>
+            <Col xs={12} md={6} lg={3} className="Step">
+              <Row>
                 <Col xs={2}>
                   <h2 className="Step-Number">4</h2>
                 </Col>
@@ -74,8 +88,13 @@ const HowItWorks = () => {
                   </p>
                 </Col>
               </Row>
+              <Row>
+                <Image
+                  src="https://www.kudoboard.com/consumer/images/process-icons/icon-4.png"
+                  className="HowItWorks-Image"
+                />
+              </Row>
             </Col>
-            <div className="Steps"></div>
           </Row>
         </Container>
       </div>

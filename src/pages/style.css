@@ -110,20 +110,59 @@
   font-weight: 400;
 }
 
+.HowItWorks-Subtitle {
+  width: 60%;
+}
+
+.Step {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .Step-Title {
   font-weight: 400;
 }
 
 .Step-Number {
-  color: white;
-  border-radius: 50%;
-  background-color: #43a6e7;
-  width: 2.5rem;
-  height: 2.5rem;
+  color: #43a6e7;
+  /* border-radius: 50%;
+  background-color: #43a6e7; */
+  width: 40px;
+  height: 40px;
   text-align: center;
   font-weight: 200;
 }
 
 .Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
+}
+
+.HowItWorks-Image {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .HowItWorks-Subtitle {
+    width: 90%;
+  }
+  .HowItWorks-Overview {
+    background-color: #f6fbfe;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .HowItWorks-Title {
+    font-size: 1.5rem;
+  }
+  .Step-Title {
+    font-size: 1.5rem;
+  }
+  .container {
+    width: 100%;
+  }
 }
