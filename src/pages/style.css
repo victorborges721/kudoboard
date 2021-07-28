@@ -99,6 +99,7 @@
   background-color: lightgray;
   height: 20vh;
   border-radius: 10px;
+  text-align: center;
 }
 
 .HowItWorks-Overview {
@@ -162,7 +163,13 @@
   .Step-Title {
     font-size: 1.5rem;
   }
-  .container {
-    width: 100%;
+  .Kudoboard-header-title {
+    font-size: 1.5rem;
+  }
+  .noKudos {
+    max-width: 90%;
+  }
+  .noKudos h1 {
+    font-size: 1.25rem;
   }
 }
