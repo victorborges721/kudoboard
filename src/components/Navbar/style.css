@@ -9,3 +9,15 @@
 .nav-link {
   color: #2471a3 !important;
 }
+
+a.active.navbar-link {
+  color: #3a4651 !important;
+}
+
+@media only screen and (min-width: 992px) {
+  a.active.navbar-link {
+    background-color: #2471a3;
+    border-radius: 10px;
+    color: white !important;
+  }
+}

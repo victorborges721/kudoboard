@@ -19,10 +19,14 @@ const NavigationBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto" activeKey="/">
             <LinkContainer exact to="/">
-              <Nav.Link eventKey="link-1">Dashboard</Nav.Link>
+              <Nav.Link eventKey="link-1" className="navbar-link">
+                Dashboard
+              </Nav.Link>
             </LinkContainer>
             <LinkContainer to="/howitworks">
-              <Nav.Link eventKey="link-2">How It Works</Nav.Link>
+              <Nav.Link eventKey="link-2" className="navbar-link">
+                How It Works
+              </Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
