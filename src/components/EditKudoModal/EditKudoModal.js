@@ -57,6 +57,7 @@ const EditKudoModal = ({
               value={newInputFrom}
               onChange={(e) => setNewInputFrom(e.target.value)}
               required
+              aria-label="Form input from"
             />
             <Form.Text className="text-muted">
               Enter your name or 'Anonymous' if you want to keep this a secret.
@@ -69,6 +70,7 @@ const EditKudoModal = ({
               value={newInputMsg}
               onChange={(e) => setNewInputMsg(e.target.value)}
               required
+              aria-label="Form input message"
             />
           </Form.Group>
           <Form.Group>
@@ -79,14 +81,25 @@ const EditKudoModal = ({
               type="url"
               value={newInputUrl}
               onChange={(e) => setNewInputUrl(e.target.value)}
+              aria-label="Form label link"
             />
             <Form.Text className="text-muted">
               Add a link to a{" "}
-              <a href="https://giphy.com/" target="_blank" rel="noreferrer">
+              <a
+                href="https://giphy.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
                 GIF
               </a>{" "}
               or{" "}
-              <a href="https://unsplash.com/" target="_blank" rel="noreferrer">
+              <a
+                href="https://unsplash.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
                 photo
               </a>{" "}
               to make your Kudo pop!

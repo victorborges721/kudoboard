@@ -28,7 +28,9 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
       onHide={() => setShowKudoboardModal(false)}
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Add a Post</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Create a Kudoboard
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
