@@ -146,6 +146,15 @@
   width: 100%;
 }
 
+.Error {
+  height: 50vh;
+  background-color: #ffecdc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 768px) {
   .HowItWorks-Subtitle {
     width: 90%;
