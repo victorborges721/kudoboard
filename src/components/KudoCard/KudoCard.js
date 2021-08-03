@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { useGlobalContext } from "../../context";
 import EditKudoModal from "../EditKudoModal";
+import DeleteKudoModal from "../DeleteKudoModal";
 import "./style.css";
 
 const KudoCard = ({ kudo, board }) => {
   const { deleteKudo } = useGlobalContext();
   const [showEditKudoModal, setShowEditKudoModal] = useState(false);
+  const [showDeleteKudoModal, setShowDeleteKudoModal] = useState(false);
   return (
     <React.Fragment>
       <Card className="Kudo">
@@ -25,7 +27,7 @@ const KudoCard = ({ kudo, board }) => {
             </Button>
             <Button
               className="Kudo-btn red-btn"
-              onClick={() => deleteKudo(board.id, kudo.id)}
+              onClick={() => setShowDeleteKudoModal(true)}
             >
               Delete
             </Button>
@@ -36,6 +38,14 @@ const KudoCard = ({ kudo, board }) => {
         <EditKudoModal
           showEditKudoModal={showEditKudoModal}
           setShowEditKudoModal={setShowEditKudoModal}
+          kudo={kudo}
+          board={board}
+        />
+      )}
+      {showDeleteKudoModal && (
+        <DeleteKudoModal
+          showDeleteKudoModal={showDeleteKudoModal}
+          setShowDeleteKudoModal={setShowDeleteKudoModal}
           kudo={kudo}
           board={board}
         />
