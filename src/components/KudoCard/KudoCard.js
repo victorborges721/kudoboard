@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
-import { useGlobalContext } from "../../context";
 import EditKudoModal from "../EditKudoModal";
 import DeleteKudoModal from "../DeleteKudoModal";
 import "./style.css";
 
 const KudoCard = ({ kudo, board }) => {
-  const { deleteKudo } = useGlobalContext();
   const [showEditKudoModal, setShowEditKudoModal] = useState(false);
   const [showDeleteKudoModal, setShowDeleteKudoModal] = useState(false);
   return (

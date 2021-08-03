@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Button, Container, CardColumns } from "react-bootstrap";
 import KudoCard from "../components/KudoCard";
 import KudoModal from "../components/KudoModal";
+import ShareKudoboardModal from "../components/ShareKudoboardModal";
 import { useGlobalContext } from "../context";
 import Error from "./Error";
 import "./style.css";
@@ -11,6 +12,7 @@ const Kudoboard = () => {
   const { id } = useParams();
   const { boards, kudos } = useGlobalContext();
   const [showKudoModal, setShowKudoModal] = useState(false);
+  const [showShareKudoboardModal, setShowShareKudoboardModal] = useState(false);
   const board = boards.filter(
     (singleBoard) => singleBoard.id.toString() === id
   )[0];
@@ -28,14 +30,19 @@ const Kudoboard = () => {
         }
       >
         <h1 className="Kudoboard-header-title">{board ? board.title : ""}</h1>
-        {kudoArray && kudoArray.length > 0 && (
-          <Button
-            onClick={() => setShowKudoModal(true)}
-            className={board ? `btn-${board.theme}` : ``}
-          >
-            + Add to board
+        <div>
+          {kudoArray && kudoArray.length > 0 && (
+            <Button
+              onClick={() => setShowKudoModal(true)}
+              className={board ? `Add-btn btn-${board.theme}` : ``}
+            >
+              + Add to board
+            </Button>
+          )}
+          <Button onClick={() => setShowShareKudoboardModal(true)}>
+            Deliver Kudoboard
           </Button>
-        )}
+        </div>
       </div>
       {kudoArray && kudoArray.length > 0 && (
         <Container>
@@ -57,6 +64,13 @@ const Kudoboard = () => {
           board={board}
           showKudoModal={showKudoModal}
           setShowKudoModal={setShowKudoModal}
+        />
+      )}
+      {showShareKudoboardModal && (
+        <ShareKudoboardModal
+          board={board}
+          showShareKudoboardModal={showShareKudoboardModal}
+          setShowShareKudoboardModal={setShowShareKudoboardModal}
         />
       )}
     </main>
