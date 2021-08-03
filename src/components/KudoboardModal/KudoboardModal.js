@@ -45,28 +45,24 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
             </Alert>
           )}
           <Form.Group>
-            <Form.Label>For:</Form.Label>
+            <Form.Label>Who is this Kudoboard for?</Form.Label>
             <Form.Control
               type="text"
               placeholder="Stephanie"
               onChange={(e) => setInputFor(e.target.value)}
               required
             />
-            <Form.Text className="text-muted">
-              Who are we celebrating?
-            </Form.Text>
           </Form.Group>
           <Form.Group>
-            <Form.Label>Title:</Form.Label>
+            <Form.Label>
+              What title would you like on top of the Kudoboard?
+            </Form.Label>
             <Form.Control
               type="text"
               placeholder="Congrats on Graduating!"
               onChange={(e) => setInputTitle(e.target.value)}
               required
             />
-            <Form.Text className="text-muted">
-              This will be displayed at the top of the Kudoboard.
-            </Form.Text>
           </Form.Group>
           <Form.Group>
             <Form.Label>Theme:</Form.Label>
@@ -83,38 +79,37 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
               <option>Retirement</option>
               <option>Wedding</option>
             </Form.Control>
-            <Form.Text className="text-muted">What's the occasion?</Form.Text>
           </Form.Group>
           <Form.Group>
-            <Form.Label>Image:</Form.Label>
-            <Form.Control
-              type="url"
-              placeholder="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
-              onChange={(e) => setInputThumb(e.target.value)}
-            />
-            <Form.Text className="text-muted">
-              Select a{" "}
-              <a
-                href="https://giphy.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
-                GIF
-              </a>{" "}
-              or{" "}
-              <a
+            <Form.Label>
+              Add an{" "}
+              <Button
                 href="https://unsplash.com/"
                 target="_blank"
-                rel="noreferrer"
-                className="link"
+                className="Img-Btn"
               >
-                photo
-              </a>{" "}
-              as a preview to your Kudoboard! On GIPHY, click 'Copy Link' and
-              paste it here. On Unsplash, right-click an image, select 'Copy
-              Image Address', and paste it here.
+                Image
+              </Button>{" "}
+              or{" "}
+              <Button
+                href="https://giphy.com/"
+                target="_blank"
+                className="Img-Btn"
+              >
+                GIF
+              </Button>{" "}
+              to your Kudoboard:
+            </Form.Label>
+            <Form.Text className="text-muted">
+              On GIPHY, click 'Copy Link' and paste it here. On Unsplash,
+              right-click an image, select 'Copy Image Address', and paste it
+              here.
             </Form.Text>
+            <Form.Control
+              type="url"
+              placeholder="https://media.giphy.com/media/WRL7YgP42OKns22wRD/giphy.gif"
+              onChange={(e) => setInputThumb(e.target.value)}
+            />
           </Form.Group>
         </Form>
       </Modal.Body>

@@ -66,36 +66,34 @@ const KudoModal = ({ showKudoModal, setShowKudoModal, board }) => {
           </Form.Group>
           <Form.Group>
             <Form.Label>
-              GIF or Photo Link: <span className="text-muted">(Optional)</span>
+              Add an{" "}
+              <Button
+                href="https://unsplash.com/"
+                target="_blank"
+                className="Img-Btn"
+              >
+                Image
+              </Button>{" "}
+              or{" "}
+              <Button
+                href="https://giphy.com/"
+                target="_blank"
+                className="Img-Btn"
+              >
+                GIF
+              </Button>{" "}
+              to your Kudoboard:
             </Form.Label>
+            <Form.Text className="text-muted">
+              On GIPHY, click 'Copy Link' and paste it here. On Unsplash,
+              right-click an image, select 'Copy Image Address', and paste it
+              here.
+            </Form.Text>
             <Form.Control
               type="url"
               placeholder="https://media.giphy.com/media/bq1PRO9CLPHmURBvv2/giphy.gif"
               onChange={(e) => setInputUrl(e.target.value)}
             />
-            <Form.Text className="text-muted">
-              Add a link to a{" "}
-              <a
-                href="https://giphy.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
-                GIF
-              </a>{" "}
-              or{" "}
-              <a
-                href="https://unsplash.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
-                photo
-              </a>{" "}
-              to make your Kudo pop! On GIPHY, click 'Copy Link' and paste it
-              here. On Unsplash, right-click an image, select 'Copy Image
-              Address', and paste it here.
-            </Form.Text>
           </Form.Group>
         </Form>
       </Modal.Body>
