@@ -25,10 +25,17 @@
   flex-direction: column;
 }
 
-.btn-Birthday {
+.btn-Birthday,
+.btn-Birthday:focus {
   background-color: white !important;
   border-color: white !important;
   color: #f15bb5;
+}
+
+.btn-Birthday:hover {
+  background-color: #f15bb5 !important;
+  border-color: white !important;
+  color: white;
 }
 
 .Kudoboard-Congratulations {
@@ -45,10 +52,16 @@
   flex-direction: column;
 }
 
-.btn-Congratulations {
+.btn-Congratulations,
+.btn-Congratulations:focus {
   background-color: white !important;
   border-color: white !important;
   color: #8338ec;
+}
+.btn-Congratulations:hover {
+  background-color: #8338ec !important;
+  border-color: white !important;
+  color: white;
 }
 
 .Kudoboard-Retirement {
@@ -65,10 +78,16 @@
   flex-direction: column;
 }
 
-.btn-Retirement {
+.btn-Retirement,
+.btn-Retirement:focus {
   background-color: white !important;
   border-color: white !important;
   color: #5390d9;
+}
+.btn-Retirement:hover {
+  background-color: #5390d9 !important;
+  border-color: white !important;
+  color: white;
 }
 
 .Kudoboard-Wedding {
@@ -85,10 +104,16 @@
   flex-direction: column;
 }
 
-.btn-Wedding {
+.btn-Wedding,
+.btn-Wedding:focus {
   background-color: white !important;
   border-color: white !important;
   color: #ef476f;
+}
+.btn-Wedding:hover {
+  background-color: #ef476f !important;
+  border-color: white !important;
+  color: white;
 }
 
 .noKudos {
