@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Modal, Form, Alert, Button } from "react-bootstrap";
 import { useGlobalContext } from "../../context";
+import { AiFillCamera } from "react-icons/ai";
+import { BiSmile } from "react-icons/bi";
 import "./style.css";
 
 const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
@@ -82,23 +84,20 @@ const KudoboardModal = ({ showKudoboardModal, setShowKudoboardModal }) => {
           </Form.Group>
           <Form.Group>
             <Form.Label>
-              Add an{" "}
               <Button
                 href="https://unsplash.com/"
                 target="_blank"
                 className="Img-Btn"
               >
-                Image
+                <AiFillCamera /> Add Image
               </Button>{" "}
-              or{" "}
               <Button
                 href="https://giphy.com/"
                 target="_blank"
                 className="Img-Btn"
               >
-                GIF
+                <BiSmile /> Add GIF
               </Button>{" "}
-              to your Kudoboard:
             </Form.Label>
             <Form.Text className="text-muted">
               On GIPHY, click 'Copy Link' and paste it here. On Unsplash,
