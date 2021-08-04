@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
 import { useGlobalContext } from "../../context";
-
 import "./style.css";
 
 const DeleteKudoModal = ({
