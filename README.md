@@ -2,6 +2,8 @@
 
 Celebrate your friends and family by creating a board and making posts with GIFs, photos, and personal messages! This app is a clone of [Kudoboard](https://www.kudoboard.com/) with additional CRUD functionality.
 
+[Visit the live app!](https://borges-kudoboard.netlify.app/)
+
 ## Features
 
 1. Create a Kudoboard for a friend/family member to celebrate their birthday, wedding, graduation, etc!
